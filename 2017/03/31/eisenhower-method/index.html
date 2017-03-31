@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="醉心於文字的人">
+    <meta name="keyword"  content="小說">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          四象限管理法的一些心得 - 小魚的部落格 | Fish&#39;s Blog
+        
+    </title>
+
+    <link rel="canonical" href="http://xsfishxs.github.io/2017/03/31/eisenhower-method/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Fish Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://xsfishxs.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/30613342.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#time management" title="time management">time management</a>
+                        
+                    </div>
+                    <h1>四象限管理法的一些心得</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by Fish on
+                        2017-03-31
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>下面這個經典的簡潔表格，就是有名的四象限時間管理法所使用的管理表格。</p>
+<table>
+<thead>
+<tr>
+<th>重要不緊急</th>
+<th><em>重要且緊急</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不重要不急</td>
+<td>緊急不重要</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>四象限管理法 (The Eisenhower Method)</strong></p>
+<p>英文借名於美國的艾森豪總統 (Dwight D. Eisenhower)，將事情依</p>
+<ul>
+<li>重要（Important）</li>
+<li>緊急 (Urgent)</li>
+</ul>
+<p>兩個維度劃分。</p>
+</blockquote>
+<p>但這篇文章的重點不是介紹這個方法，而是分享一些小魚自己實際使用後的心得。關於四象限管理法的詳細介紹，可以參考維基百科<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>以及MBA智庫<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，或是直接 google 「四象限管理法」，你就會找到許多資料。</p>
+<h2>小魚的心得</h2>
+<p>小魚自己使用的心得，主要有以下幾點：</p>
+<ol>
+<li>重點在區分<strong>重要性</strong>，而不是時間分配</li>
+<li><strong>重要不緊急</strong> 先於 緊急不重要</li>
+<li>吾日三省吾身！？</li>
+</ol>
+<p>話不多說，接著就來一一說明吧！</p>
+<h2>1. 重點在區分重要性，而不是分配時間</h2>
+<p>相較於其他時間管理方法，例如蕃茄鐘<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>，將重點放在如何做時間分配；四象限管理法更像是【80 / 20】法則<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>，重點在區分待辦事項的重要性（和緊急程度）。四象限管理法並不是強制我們事情一定要「重要先於不重要、緊急先於不緊急」不，沒有，並不是這樣的。</p>
+<blockquote>
+<p>四象限管理法並沒有限制我們哪些事情一定要先做</p>
+</blockquote>
+<p>事情的先後次序、哪個時段該安排什麼事情，還是得依照個人習慣與實際狀況而定，並不是依照表格把事情的重要性區分完之後，就一定得從【重要且緊急】的事情開始，然後最後再處理【不重要不急】的事。四象限管理法只是把事情依重要程度與緊急程度作區別，並沒有接著要求我們的時間分配。</p>
+<p>如果這樣，那麼，我們為什麼要使用四象限法則，來區分事情的重要性與緊急程度？</p>
+<blockquote>
+<p>當事情太多，同一時段有多項事情需要競合時，四象限法則就派上用場了</p>
+</blockquote>
+<p>手上的待辦清單有許多事需要做，但我只有一個、我不會分身，我的時間跟大家一樣只有 24 小時，要怎麼把時間花在刀口上、用在最有價值的事情上？小魚認為這才是四象限法則的精髓：<strong>當你在同一個時段，有太多事情要做時，四象限法則可以幫助你取捨優先順序</strong>。</p>
+<p>所以當我們在安排一天的行程時，早上起床後，我們應該安排「刷牙、洗臉、吃早餐」而不是「完成今天要出的企劃案」，儘管前者屬於「重要不緊急」（一天不刷牙洗臉真的不會怎麼樣⋯⋯真的！），而後者屬於「重要且緊急」，今天沒把該做的工作做完，可能就會有待業危機。</p>
+<p>這例子或許有點無腦，不過當我們依四象限法則分配完事情重要性與緊急程度之後，並非便要死板地按照順序逐一完成事項。</p>
+<blockquote>
+<p>在不同的時段，會有不同適合該時段完成的事情，先把適合的事情挑出來。之後當事情太多不知道該怎麼取捨的時候，再來看看四象限法則。</p>
+</blockquote>
+<h2>2. 重要不緊急 先於 緊急不重要</h2>
+<p>使用四象限法則最常遇到的困擾，也是每位初學者、使用者最常感到困惑的，便是【重要不緊急】與【緊急不重要】孰輕孰重？</p>
+<p>先說小魚自己的結論，也就是這一段的標題：</p>
+<blockquote>
+<p>重要不緊急 先於 緊急不重要</p>
+</blockquote>
+<p>因為這問題是四象限法則裡最大的困難，所以同樣的一句話不厭其煩再講一次。不是每個人都同意這個答案，但這是我自己的答案。</p>
+<p>首先，小魚以為一件事情「重要」，便是完成這件事情，能帶來很大的效益、價值；一件事情「緊急」，便是這件事情需要被完成的時間非常迫切。因此，被歸類於【重要不緊急】的事情，是完成後能帶來很大的效益，但不急於完成的事情；相對的，【緊急不重要】的事情，就是事情快要到期、需要馬上被完成，但其實不會帶來很大的效益。</p>
+<p>定義好這兩類事情後，就能接著討論孰輕孰重。小魚以為：</p>
+<blockquote>
+<p>事情的重要性通常不會輕易改變，但隨著時光飛逝，事情的緊急程度必然逐漸提升。</p>
+</blockquote>
+<p>完成一件【緊急不重要】的事情，會感覺手上的事情減少一件，壓力會變小、心情會比較好、會比較放鬆，或許工作效率會因此變好，但可惜的是完成這件事其實帶來的效益非常有限。而當我們總是等到【重要不緊急】的事情，隨著時間經過，自然而然變成【重要且緊急】了才開始處理，那壓力勢必不小。在這種狀況下，其實我們便進入了「經常被死線壓著跑」的工作模式裡。當自己份內的事情在能力可以容許的範圍時，會因為總是能把所有事情處理完，而很有成就感；但一旦事情多了，那便容易經常處於壓力、焦慮的情況，總是追趕著緊急的待辦事項。尤其隨著職位愈來愈高，管理的事項愈來愈多，事情必然有增無減，將會非常容易陷入這種困境。</p>
+<p>另一方面，若我們優先處理【重要不緊急】的事情，我們必須放棄一些【緊急不重要】的事，然而相對的，我們能確保所有有價值的事情，都能有比較充裕的時間好好處理。</p>
+<blockquote>
+<p>選擇放棄一件事情是困難的，尤其我們的文化期許著我們能盡善盡美。但只有我們學會捨棄一些事情，或許才能得到更多。</p>
+</blockquote>
+<p>放著讓一些事情爛尾，這背離我們的教育經驗，但卻是人生必然要面對的一個課題。「人們終將會爬到一個他無法勝任的位置，才會停止。」背負太多的東西無法爬得高、走得遠，但若是懂得放下一些事情，我們才能到達更高的境界。當自己管理的事情愈來愈多，到了自己無法負荷的時候，能夠放下一些其實不那麼重要的事情，把心力著眼於真正重要的地方，才能讓自己在高處更處之泰然。</p>
+<p>作為從社會底層開始往上爬的平民們，我們通常會習慣「把自己份內的事情做完」，因此能夠「做完」常常成為我們比較關注的重點。但當我們隨著經歷成長，往高處爬時，「做好、做滿」才是更重要的事 XD。然而人的習慣是難改的，及早開始學習這種態度，小魚以為可以幫助我們走得更高、更久、更遠。</p>
+<p>因此，還是不厭其煩地再說一次：</p>
+<blockquote>
+<p>重要不緊急 先於 緊急不重要</p>
+</blockquote>
+<h2>3. 吾日三省吾身！？</h2>
+<p>承襲上一點，因為選擇【重要不緊急】先於【緊急不重要】，因此當我們使用四象限法則分類完事情之後，其實也默默做了一個選擇</p>
+<blockquote>
+<p>當事情多的時候，我們優先處理重要的事情</p>
+</blockquote>
+<p>每次使用四象限法則，就是一次自我檢視。到底什麼事情對自己而言是真正重要的、是我們在乎的、是我們比較關心的？又哪些事情雖然我們也列入了待辦清單，但其實不是那麼重要，為什麼出現在清單上？</p>
+<p>我們想做的事情很多，人人都希望有充裕的時間，完成所有自己想做的事情。但人生最大的困境就是時間是有限的，而人類的慾望是無窮的，因此抉擇就變成了一道智慧課題。</p>
+<p>透過四象限法則，我們也會經常性地逼自己思考、反思，檢視我們真正在乎的價值，也讓我們掌握承擔的事情與責任。如果是劃入不重要的事情，是不是下次我們可以選擇拒絕、或交由其他人來處理？事情太多的時候，是不是有些事情可以請他人幫忙、或交給其他人來完成？有沒有自己其實很在乎，但經常被劃入不重要的事情？為什麼會發生這樣的事？</p>
+<blockquote>
+<p>每次使用四象限法則，就是一次自我認識與成長，了解自己做事的習慣，並驗證自己真正在意的價值。</p>
+</blockquote>
+<p>把事情分類是困難的，一開始也常常容易分錯重要程度與緊急程度。但當我們愈來愈熟習這套機制的時候，我們也會愈來愈了解事情的輕重緩急，然後更能把我們有限的時間與精力，使用在對我們來說最有價值的事情上。</p>
+<h2>結語</h2>
+<p>四象限法則並不是唯一的時間管理方法，但是一套簡單同時富有人生哲學的一個入門管理方法。這個方法不難上手，但其中蘊含著很多智慧與省思，完全不是表面上的四個象限分類這麼單純而已。</p>
+<p>如果你還沒有任何自己喜歡的時間管理方法，或者你有時間管理困擾，推薦嘗試一下<strong>四象限管理法</strong>吧！</p>
+<blockquote>
+<ol>
+<li>輕鬆上手、入門簡單</li>
+<li>思想深刻、妙趣無窮</li>
+</ol>
+</blockquote>
+<p>或者也分享一下你的時間管理方法 &gt;U&lt; ?</p>
+<h2>延伸閱讀</h2>
+<p>想要更了解四象限管理法，或者其他文章內提到的方法，可以參考：</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Wikipedia - <a href="https://en.wikipedia.org/wiki/Time_management" target="_blank" rel="external">Time Management</a> <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>MAB智庫 - <a href="http://wiki.mbalib.com/zh-tw/%E6%97%B6%E9%97%B4%E2%80%9C%E5%9B%9B%E8%B1%A1%E9%99%90%E2%80%9D%E6%B3%95" target="_blank" rel="external">四象限管理法</a> <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>Wikipedia - <a href="https://zh.wikipedia.org/wiki/%E7%95%AA%E8%8C%84%E5%B7%A5%E4%BD%9C%E6%B3%95" target="_blank" rel="external">蕃茄鐘工作法</a> <a href="#fnref3" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>Wikipedia - <a href="https://zh.wikipedia.org/wiki/%E5%B8%95%E9%9B%B7%E6%89%98%E6%B3%95%E5%88%99" target="_blank" rel="external">80 / 20法則</a> <a href="#fnref4" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/03/07/typescript-import-module/" data-toggle="tooltip" data-placement="top" title="Typescript import module">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#time management" title="time management">time management</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://blog.kaijun.rocks" target="_blank">Kaijun&#39;s Blog</a></li>
+                    
+                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/littlefish.chan.7">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/xsfishxs">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/littlefish-chan-8b04b290">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Fish Blog 2017 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://xsfishxs.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://xsfishxs.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
